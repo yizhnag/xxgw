@@ -1,0 +1,93 @@
+/*导航栏样式*/
+.navbar{
+			/*border: 1px solid red;*/
+			height: 120px;
+			background: rgba(255,255,255,0.5);
+		}
+/*导航栏logo*/
+.navbar-brand{
+			/*border: 1px solid blue;*/
+			height: 77px;
+			width: 77px;
+			font-size: 50px;
+			margin-top: 23px;
+			margin-left: 33px;
+			text-align: center;
+			background: #a69173;
+			color:#ffffff;
+			line-height: 40px;
+}
+.navbar-brand:hover{color:#ffffff;}
+/*导航栏链接*/
+#nav1{
+	position: relative;
+	top: 35px;
+	left: 55px;
+}
+#nav1 ul li{
+	padding:0 17.5px;
+	font-size: 16px;
+}
+#nav1 ul li a{
+	color: #414141;
+	/*text-shadow: 1px 1px 5px rgba(0,0,0,.6);*/
+	background: transparent;
+}
+ul > li > a::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 60%;
+	height: 4px;
+	background: #00428e;
+	opacity: 0;
+	transition: all .35s;
+	transform: translateY(5px) translateX(-50%);
+}
+
+ul > li > a:hover::after {
+	opacity: 1;
+	transform: translateY(-5px) translateX(-50%);
+}
+/*轮播图*/
+.swiper-slide img{
+		width: 100%;
+}
+.zwjs .small{
+	height: 40px;
+	line-height: 30px;
+}
+.zwjs{
+	height: 210px;
+}
+/*.xc img{
+	height: 250px;
+	width: 200px;
+}*/
+@media screen and (max-width: 768px){
+	.navbar-brand {
+		width: 40px;
+		height: 40px;
+		font-size: 18px;
+		margin-top: 8px;
+		line-height: 10px;
+		padding:15px 12px;
+	}
+	.navbar{height: 60px;}
+	.navbar-header .navbar-toggle{
+		background-color: #8c8383c7;
+	}
+	.navbar-header .navbar-toggle .icon-bar{
+		background-color:white;
+	}
+	#nav1 ul li a{
+		color: #efe5e5cf;
+		background: #463f3f73;
+		font-size: 12px;
+		text-align: center;
+	}
+	#nav1{top:0;}
+	#nav1 .nav{width: 80%;}
+	.navbar-nav{margin: 7.5px auto;}
+}
